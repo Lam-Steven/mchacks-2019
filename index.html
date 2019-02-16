@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-        #video {
-            width: 224px;
-            height: 224px;
-            background-color: #666;
-        }
+      #video {
+        width: 224px;
+        height: 224px;
+        background-color: #666;
+      }
 
-        canvas {
-            width: 224px;
-            height: 224px;
-            background-color: #666;
-        }
+      canvas {
+        width: 224px;
+        height: 224px;
+        background-color: #666;
+      }
 
-        .predicted {
-            border-style: solid;
-            border-color: red;
-        }
+      .predicted {
+        border-style: solid;
+        border-color: red;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <video
+      autoplay
+      playsinline
+      muted
+      id="video"
+      width="224"
+      height="224"
+    ></video>
 
-
-    <video autoplay playsinline muted id="video" width="224" height="224"></video>
-
-    <button onclick="train()">train</button>
-    <button onclick="start()">start</button>
+    <button id="trainButton">train</button>
+    <button id="predictButton">start prediction</button>
     <span id="status"></span>
     <span id="loss"></span>
-    <br>
+    <br />
 
     <canvas class="canvases" id="1">button1</canvas>
     <span id="counter1">0</span>
@@ -48,7 +52,5 @@
 
     <canvas class="canvases" id="4">button4</canvas>
     <span id="counter4">0</span>
-
-</body>
-
+  </body>
 </html>
