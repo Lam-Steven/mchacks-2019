@@ -1,3 +1,6 @@
+import * as tf from '@tensorflow/tfjs';
+console.log(tf);
+
 const video = document.getElementById("video");
 const canvases = document.getElementsByClassName("canvases");
 const status = document.getElementById("status");
